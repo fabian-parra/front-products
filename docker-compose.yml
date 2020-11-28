@@ -1,0 +1,22 @@
+version: '3.7'
+services:
+  ms-products:
+    image: feparra/ms-products:1
+    environment:
+      PORT: 8081
+      DB_HOST: 'mongo'
+      DB_USER: 'brandDiscountsUser'
+      DB_PASSWORD: ${DB_SECRET_PASSWORD}
+    ports:
+      - "8081:8081"
+    extra_hosts:
+      - "mongo:${MACHINE_IP}"
+  bff-products:
+    image: feparra/bff-products:1
+    environment:
+      PORT: 8082
+      MS_PORT: 8081
+    ports:
+      - "8082:8082"
+    extra_hosts:
+      - "ms.product.com:${MACHINE_IP}"

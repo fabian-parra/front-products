@@ -25,12 +25,36 @@ npm i
 ```
 Con esto ya habrás instalado todo lo necesario.
 
+### Ejecutar junto al BFF
+
+Para ejecutar el front en conjunto con su bff, primero que nada debes descargar el siguiente repositorio:
+
+```
+git clone https://github.com/walmartdigital/brand-discounts-db
+```
+
+Luego debes ejecutar los siguientes comandos:
+```
+cd brand-discounts-db
+make database-up
+```
+Esto levantará un contendor con una base de datos mongo.
+Luego vuelve a este repositorio ejecuta el comando:
+```
+MACHINE_IP=<tu-ip> DB_SECRET_PASSWORD=brandDiscountsPassword npm run start:bff
+```
+Debes ingresar la ip de tu máquina para que los contendores internamente puedan comunicarse.
+Con esto el proyecto quedará listo en la url http://localhost:8080
+
+
+
 ### Desarrollo
 
 Existen varios comandos útiles, los cuales se listan a continuación:
 
 * **npm start**: Levanta el proyecto en tu maquina local.
 * **npm run start:stubs**: Levanta el proyecto y un backend dummy.
+* **npm run start:bff**: Levanta front, bff y un microservicio.
 * **npm run stubby**: Levanta un backed dummy con algunas respuestas JSON de prueba.
 * **npm run lint**: Ejecuta el análisis sintactico usando eslint.
 * **npm run test:unit**: Ejecuta las pruebas unitarias.

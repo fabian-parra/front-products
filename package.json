@@ -6,6 +6,8 @@
   "scripts": {
     "start": "webpack-dev-server --config webpack.dev.config.js",
     "start:stubs": "npm run stubs | npm start",
+    "start:bff": "npm run bff && npm start",
+    "bff": "docker-compose up -d",
     "stubs": "stubby --watch --quiet --data stubby.json",
     "lint": "eslint --max-warnings 0 src test",
     "test:unit": "mochapack --webpack-config webpack.test.config.js --recursive 'test/unit'",

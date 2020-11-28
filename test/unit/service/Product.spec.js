@@ -16,13 +16,13 @@ describe('Products Service', () => {
   })
 
   it('fetchProductId', () => ProductService.fetchProductId('123').then(data => {
-    expect(global['fetch']).to.have.been.calledWith(`http://localhost:8882/bff/get-products?id=123`)
+    expect(global['fetch']).to.have.been.calledWith(`http://localhost:8082/bff/get-products?id=123`)
     expect(response.json).to.have.been.called
     expect(data).to.equal('data')
   }))
 
   it('fetchProductMatch', () => ProductService.fetchProductMatch('asdf').then(data => {
-    expect(global['fetch']).to.have.been.calledWith(`http://localhost:8882/bff/get-products?match=asdf`)
+    expect(global['fetch']).to.have.been.calledWith(`http://localhost:8082/bff/get-products?match=asdf`)
     expect(response.json).to.have.been.called
     expect(data).to.equal('data')
   }))
