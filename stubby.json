@@ -1,0 +1,28 @@
+[
+  {
+    "request": {
+      "method": "GET",
+      "query": {
+        "id": "1"
+      },
+      "url": "^/bff/get-products"
+    },
+    "response": {
+      "file": "test/stubs/1-id.json",
+      "status": 200
+    }
+  },
+  {
+    "request": {
+      "method": "GET",
+      "query": {
+        "match": "tele"
+      },
+      "url": "^/bff/get-products"
+    },
+    "response": {
+      "file": "test/stubs/2-ids.json",
+      "status": 200
+    }
+  }
+]

@@ -1,0 +1,44 @@
+.product {
+  display: flex;
+  flex-direction: column;
+  max-width: 15rem;
+  background-color: white;
+  border-radius: 1rem;
+  padding: 1rem;
+  margin-left: 1rem;
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+  > div {
+    display: flex;
+    align-items: center;
+
+    > span:first-child {
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: dimgray;
+    }
+
+    > span:last-child {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-left: .5rem;
+      background-color: orangered;
+      color: white;
+      border-radius: 16px;
+      width: 2.5rem;
+      height: 1.5rem;
+      font-weight: bold;
+    }
+  }
+
+  > span {
+    text-decoration: line-through;
+    font-size: .8rem;
+  }
+  
+}

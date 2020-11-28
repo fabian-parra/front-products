@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "brand": "Marca1",
+    "description": "Televisión 54''",
+    "image": "www.lider.cl/catalogo/images/catalogo_no_photo.jpg",
+    "price": 80000,
+    "discount": 16000,
+    "discountPercent": 20,
+    "currency": "CLP"
+  },
+  {
+    "id": 39,
+    "brand": "Marca6",
+    "description": "Smartphone Teledummy II",
+    "image": "www.lider.cl/catalogo/images/catalogo_no_photo.jpg",
+    "price": 120000,
+    "discount": 48000,
+    "discountPercent": 40,
+    "currency": "CLP"
+  }
+]
